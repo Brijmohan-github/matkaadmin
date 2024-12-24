@@ -1,0 +1,97 @@
+/* styles/index.css */
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+:root {
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+  font-family: "Inter", sans-serif;
+}
+.ant-input-outlined.ant-input-outlined {
+  border: 2px solid black !important;
+}
+.ant-picker-input {
+  border: 2px solid black !important;
+  padding: 6px 16px;
+  min-width: 200px;
+  margin-bottom: 12px;
+  border-radius: 10px;
+}
+.ant-picker-input > input::placeholder {
+  color: rgb(38, 142, 246) !important;
+  font-style: italic;
+}
+.ant-picker-suffix {
+  color: rgb(38, 142, 246) !important;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  line-height: 1;
+  background: #f2f4f7;
+  color: #263238;
+  font-family: "Inter", sans-serif;
+  touch-action: manipulation;
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+/* ==============horizontal scroll bar design ===============*/
+.jayesh {
+  overflow: auto;
+}
+
+.jayesh::-webkit-scrollbar {
+  width: 0px; /* for vertical scroll */
+}
+
+.jayesh::-webkit-scrollbar-thumb {
+  background-color: transparent; /* Makes scrollbar thumb invisible */
+}
+
+.jayesh::-webkit-scrollbar-track {
+  background-color: transparent; /* Makes scrollbar track invisible */
+}
+.css-dev-only-do-not-override-4e08zz {
+  border: none !important;
+  outline: none !important;
+}
+
+/* =================scrollbar hide from body ===================*/
+/* Hide the scrollbar for all browsers except Firefox */
+
+/* Hide the scrollbar for Firefox */
+body::-webkit-scrollbar {
+  width: 8px; /* Width of the scrollbar */
+  border-radius: 16px; /* Rounded corners for the scrollbar */
+  background-color: transparent; /* Optional: Makes the track transparent */
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: #babec4; /* Color of the thumb */
+  border-radius: 16px; /* Rounded corners for the thumb */
+  border: 4px solid transparent; /* Increase border size for a visually smaller thumb */
+  background-clip: content-box; /* Adjust background clip to content-box */
+}
+
+body::-webkit-scrollbar-track {
+  background-color: transparent; /* Keeps the track transparent */
+  border-radius: 16px; /* Rounded corners for the track */
+}
+
+/* Optional: Add hover effects for the scrollbar thumb */
+body::-webkit-scrollbar-thumb:hover {
+  background-color: #4299e1; /* A blue color similar to Tailwind's text-blue-500 */
+}

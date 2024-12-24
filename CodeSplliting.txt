@@ -1,0 +1,75 @@
+1. Normal Way...
+// src/components/Home.jsx
+import React from 'react';
+
+const Home = ({ history }) => {
+  const loadFeature = async () => {
+    const { default: FeatureComponent } = await import('./Feature.jsx');
+    history.push({ pathname: '/feature', state: { component: FeatureComponent } });
+  };
+
+  return (
+    <div>
+      <h1>Home Page</h1>
+      <button onClick={loadFeature}>Load Feature</button>
+    </div>
+  );
+};
+
+export default Home;
+
+2. Using React.lazy and suspance....
+// src/components/Home.jsx
+import React, { lazy } from 'react';
+import { useNavigate } from 'react-router-dom';
+
+const Feature = lazy(() => import('./Feature.jsx'));
+
+const Home = () => {
+  const navigate = useNavigate();
+  const loadFeature = () => {
+    navigate('/feature', { state: { component: Feature } });
+  };
+
+  return (
+    <div>
+      <h1>Home Page</h1>
+      <button onClick={loadFeature}>Load Feature</button>
+    </div>
+  );
+};
+
+export default Home;
+
+// src/App.jsx
+import React, { lazy, Suspense } from 'react';
+import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
+
+const Home = lazy(() => import('./components/Home.jsx'));
+const Feature = lazy(() => import('./components/Feature.jsx'));
+
+const App = () => {
+  return (
+    <Router>
+      <nav>
+        <ul>
+          <li>
+            <Link to="/">Home</Link>
+          </li>
+          <li>
+            <Link to="/feature">Feature</Link>
+          </li>
+        </ul>
+      </nav>
+
+      <Suspense fallback={<div>Loading...</div>}>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/feature" element={<Feature />} />
+        </Routes>
+      </Suspense>
+    </Router>
+  );
+};
+
+export default App;

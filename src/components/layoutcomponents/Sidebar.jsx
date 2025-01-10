@@ -39,7 +39,7 @@ function Sidebar({ collapse, setCollapse }) {
                 <>
                   <div className="flex items-center gap-2">
                     <img src="/logo.png" width={50} />
-                    <div className="text-md ">Stargold Matka</div>
+                    <div className="text-md ">Ratan Khichi</div>
                   </div>
                   <div className="absolute  top-5 right-4">
                     <AiOutlineClose />

@@ -5,14 +5,14 @@ const Privacy = () => {
     <main className="min-h-screen bg-gradient-to-r from-purple-400 via-pink-500 to-red-500 text-gray-100">
       <div className="container mx-auto px-6 py-12">
         <h1 className="text-center text-5xl font-extrabold text-white mb-12">
-          Privacy Policy for Stargold Matka Matka
+          Privacy Policy for Ratan Khichi Matka
         </h1>
 
         <article className="max-w-4xl mx-auto bg-white shadow-2xl rounded-3xl p-8 text-gray-800">
           <section className="mb-8">
             <h2 className="text-3xl font-bold mb-4">Introduction</h2>
             <p>
-              Welcome to <strong>Stargold Matka Matka</strong>. Your privacy is
+              Welcome to <strong>Ratan Khichi Matka</strong>. Your privacy is
               critically important to us. This policy aims to explain how we
               collect, use, and share your information. By using our app, you
               agree to the collection and use of information in accordance with
@@ -50,7 +50,7 @@ const Privacy = () => {
           <section className="mb-8">
             <h2 className="text-3xl font-bold mb-4">Use of Data</h2>
             <p>
-              Stargold Matka Matka uses the collected data for various purposes:
+              Ratan Khichi Matka uses the collected data for various purposes:
             </p>
             <ul className="list-disc pl-8 mt-4 space-y-2">
               <li>To provide and maintain our app</li>
